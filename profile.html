@@ -288,7 +288,7 @@
                                 <a class="img-link" href="profile.html">
                                     <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/media/avatars/avatar10.jpg" alt="">
                                 </a>
-                                <h1 class="font-w700 my-2 text-white">Profile</h1>
+                                <h1 class="font-w700 my-2 text-white" data-i18n="userProfile">Profile</h1>
                                 <h2 class="h4 font-w700 text-white-75">
                                    Ahmed Yasser
                                 </h2>
@@ -304,38 +304,38 @@
                         <div class="block-content">
                             <form action="be_pages_projects_edit.html" method="POST" enctype="multipart/form-data" onsubmit="return false;">
                                 <!-- User Profile -->
-                                <h2 class="content-heading pt-0">
-                                    <i class="fa fa-fw fa-user-circle text-muted mr-1"></i> User Profile
+                                <h2 class="content-heading pt-0" >
+                                    <i class="fa fa-fw fa-user-circle text-muted mr-1"></i> <span data-i18n="userProfile">User Profile</span> 
                                 </h2>
                                 <div class="row push">
                                     <div class="col-lg-4">
-                                        <p class="text-muted">
+                                        <p class="text-muted" data-i18n="userProfileDesc">
                                             Your account’s vital info. Your username will be publicly visible.
                                         </p>
                                     </div>
                                     <div class="col-lg-8 col-xl-5">
                                         <div class="form-group">
-                                            <label for="dm-profile-edit-username">Username</label>
+                                            <label for="dm-profile-edit-username" data-i18n="username">Username</label>
                                             <input type="text" class="form-control" id="dm-profile-edit-username" name="dm-profile-edit-username" placeholder="Enter your username.." value="dev.ahmedyasser">
                                         </div>
                                         <div class="form-group">
-                                            <label for="dm-profile-edit-name">Name</label>
+                                            <label for="dm-profile-edit-name" data-i18n="name">Name</label>
                                             <input type="text" class="form-control" id="dm-profile-edit-name" name="dm-profile-edit-name" placeholder="Enter your name.." value="Ahmed Yasser">
                                         </div>
                                         <div class="form-group">
-                                            <label for="dm-profile-edit-email">Email Address</label>
+                                            <label for="dm-profile-edit-email" data-i18n="email">Email Address</label>
                                             <input type="email" class="form-control" id="dm-profile-edit-email" name="dm-profile-edit-email" placeholder="Enter your email.." value="dev.ahmedyasser@example.com">
                                         </div>
                                       
                                         <div class="form-group">
-                                            <label>Your Avatar</label>
+                                            <label data-i18n="avatar">Your Avatar</label>
                                             <div class="push">
                                                 <img class="img-avatar" src="assets/media/avatars/avatar10.jpg" alt="">
                                             </div>
                                             <div class="custom-file">
                                                 <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
                                                 <input type="file" class="custom-file-input" data-toggle="custom-file-input" id="dm-profile-edit-avatar" name="dm-profile-edit-avatar">
-                                                <label class="custom-file-label" for="dm-profile-edit-avatar">Choose a new avatar</label>
+                                                <label class="custom-file-label" for="dm-profile-edit-avatar" data-i18n="chooseAvatar">Choose a new avatar</label>
                                             </div>
                                         </div>
                                     </div>
@@ -344,28 +344,28 @@
 
                                 <!-- Change Password -->
                                 <h2 class="content-heading pt-0">
-                                    <i class="fa fa-fw fa-asterisk text-muted mr-1"></i> Change Password
+                                    <i class="fa fa-fw fa-asterisk text-muted mr-1"></i> <span data-i18n="changePass">Change Password</span>
                                 </h2>
                                 <div class="row push">
                                     <div class="col-lg-4">
-                                        <p class="text-muted">
+                                        <p class="text-muted" data-i18n="changePassDesc">
                                             Changing your sign in password is an easy way to keep your account secure.
                                         </p>
                                     </div>
                                     <div class="col-lg-8 col-xl-5">
                                         <div class="form-group">
-                                            <label for="dm-profile-edit-password">Current Password</label>
+                                            <label for="dm-profile-edit-password" data-i18n="currentPass">Current Password</label>
                                             <input type="password" class="form-control" id="dm-profile-edit-password" name="dm-profile-edit-password">
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-12">
-                                                <label for="dm-profile-edit-password-new">New Password</label>
+                                                <label for="dm-profile-edit-password-new" data-i18n="newPass">New Password</label>
                                                 <input type="password" class="form-control" id="dm-profile-edit-password-new" name="dm-profile-edit-password-new">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-12">
-                                                <label for="dm-profile-edit-password-new-confirm">Confirm New Password</label>
+                                                <label for="dm-profile-edit-password-new-confirm" data-i18n="confirmPass">Confirm New Password</label>
                                                 <input type="password" class="form-control" id="dm-profile-edit-password-new-confirm" name="dm-profile-edit-password-new-confirm">
                                             </div>
                                         </div>
@@ -376,9 +376,9 @@
                                 <!-- Submit -->
                                 <div class="row push">
                                     <div class="col-lg-8 col-xl-5 offset-lg-4">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <button type="submit" class="btn btn-alt-primary">
-                                                <i class="fa fa-check-circle mr-1"></i> Update Profile
+                                                <i class="fa fa-check-circle mr-1"></i> <span data-i18n="updateProfile">Update Profile</span> 
                                             </button>
                                         </div>
                                     </div>
@@ -399,62 +399,83 @@
         <script src="assets/js/dashmix.core.min.js"></script>
         <script src="assets/js/dashmix.app.min.js"></script>
         <script>
-            const translations = {
-                en: {
-                    home: "Home",
-                    myPoints: "My Points",
-                    bestCoupons: "Best Coupons",
-                    english: "English",
-                    arabic: "Arabic",
-                    login: "Login",
-                    profile: "Profile",
-                    experienceBest : "Experience the best patisserie.",
-                    loyaltyDiscount : "Loyalty Discount",
-                    rewards : "Rewards",
-                    redeemedPoints : "Redeemed Points",
-                    ptsToExpire : "Points to Expire",
-                    minRedeem : "Min Redeem",
-                    maxRedeem : "Max Redeem",
-                    getBestOffers : "Get the best deals & offers",
-                    noon : "Noon",
-                    btech : "B Tech",
-                    coupon10 : "Coupon 10% OFF",
-                    getCoupon : "Get Coupon",
-                    welcomeToHappy : "Welcome to the world of happiness",
-                    copyright : "Copyright",
-                    registeration : "Registeration"
-    
-                },
-                ar: {
-                    home: "الصفحة الرئيسية",
-                    myPoints: "نقاطي",
-                    bestCoupons: "افضل الكوبونات",
-                    english: "الانجليزية",
-                    arabic: "العربية",
-                    login: "تسجيل دخول",
-                    profile: "الملف الشخصي",
-                    experienceBest : "جرب أفضل الحلويات.",
-                    loyaltyDiscount : "خصم الولاء",
-                    rewards : "المكافئات",
-                    redeemedPoints : "النقاط المستبدلة",
-                    ptsToExpire : "نقاط تنتهي صلاحيتها",
-                    minRedeem : "الحد الأدنى من الاسترداد",
-                    maxRedeem : "الحد الاقصي من الاسترداد",
-                    getBestOffers : "احصل على أفضل الصفقات والعروض",
-                    noon : "نون",
-                    btech : "بي تك",
-                    coupon10 : "كوبون خصم 10٪",
-                    getCoupon : "احصل على قسيمة",
-                    welcomeToHappy : "مرحبا بكم في عالم السعادة",
-                    copyright : "حقوق الملكية",
-                    registeration : "تسجيل جديد"
-    
-    
-    
-    
-                },
-            };
-            function onSelectLang() {
+          const translations = {
+  en: {
+      home: "Home",
+      myPoints: "My Points",
+      bestCoupons: "Best Coupons",
+      english: "English",
+      arabic: "Arabic",
+      login: "Login",
+      profile: "Profile",
+      experienceBest : "Experience the best patisserie.",
+      loyaltyDiscount : "Loyalty Discount",
+      rewards : "Rewards",
+      redeemedPoints : "Redeemed Points",
+      ptsToExpire : "Points to Expire",
+      minRedeem : "Min Redeem",
+      maxRedeem : "Max Redeem",
+      getBestOffers : "Get the best deals & offers",
+      noon : "Noon",
+      btech : "B Tech",
+      coupon10 : "Coupon 10% OFF",
+      getCoupon : "Get Coupon",
+      welcomeToHappy : "Welcome to the world of happiness",
+      copyright : "Copyright",
+      registeration : "Registeration",
+      statistics : "Statistics",
+      username : "Username",
+      name : "Name",
+      avatar : "Your Avatar",
+      currentPass : "Current Password",
+      newPass : "New Password",
+      confirmPass : "Confirm New Password",
+      changePass : " Change Password",
+      userProfile : "  User Profile",
+      copy : "copy",
+      goToOffer : "Go To Offer",
+      specialOffer : "Noon up 80% Off + Extra 10% Off Sitewide Up to 50 EGP, Grab Your Code"
+
+
+  },
+  ar: {
+      home: "الصفحة الرئيسية",
+      myPoints: "نقاطي",
+      bestCoupons: "افضل الكوبونات",
+      english: "الانجليزية",
+      arabic: "العربية",
+      login: "تسجيل دخول",
+      profile: "الملف الشخصي",
+      experienceBest : "جرب أفضل الحلويات.",
+      loyaltyDiscount : "خصم الولاء",
+      rewards : "المكافئات",
+      redeemedPoints : "النقاط المستبدلة",
+      ptsToExpire : "نقاط تنتهي صلاحيتها",
+      minRedeem : "الحد الأدنى من الاسترداد",
+      maxRedeem : "الحد الاقصي من الاسترداد",
+      getBestOffers : "احصل على أفضل الصفقات والعروض",
+      noon : "نون",
+      btech : "بي تك",
+      coupon10 : "كوبون خصم 10٪",
+      getCoupon : "احصل على قسيمة",
+      welcomeToHappy : "مرحبا بكم في عالم السعادة",
+      copyright : "حقوق الملكية",
+      registeration : "تسجيل جديد",
+      statistics :  "إحصائيات",
+      username : "اسم المستخدم",
+      name : "الاسم",
+      avatar : "شخصيتك الإفتراضية",
+      currentPass : "كلمة المرور الحالية",
+      newPass : "كلمة المرور الجديدة",
+      confirmPass : "قم بتأكيد كلمة مرور جديدة",
+      changePass : " تغيير كلمة المرور",
+      userProfile : "  الملف الشخصي",
+      copy : "انسخ",
+                    goToOffer : "اذهب الي العرض",
+                    specialOffer : "خصم نون 80٪ + خصم إضافي 10٪ على مستوى الموقع حتى 50 جنيهًا ، احصل على الكود الخاص بك"
+  },
+};
+          function onSelectLang() {
               
                 setLanguage(document.getElementById("language-select").value);
                 localStorage.setItem("lang", document.getElementById("language-select").value);

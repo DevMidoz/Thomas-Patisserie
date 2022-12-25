@@ -57,8 +57,10 @@
                                 </div>
                                 <!-- Header -->
                                 <div class="mb-3 text-center">
-                                    <img class="mb-3"  src="assets/media/photos/thomas_icon.png" data-toggle="appear" data-class="animated fadeInDown" alt="thomas_icon">
-                                    <p class="text-uppercase font-w700 font-size-sm text-muted">Registeration</p>
+                                    <a href="index.html">
+                                        <img class="mb-3"  src="assets/media/photos/thomas_icon.png" data-toggle="appear" data-class="animated fadeInDown" alt="thomas_icon">
+                                    </a>
+                                    <p class="text-uppercase font-w700 font-size-sm text-muted" data-i18n="registeration">Registeration</p>
                                 </div>
                                 <!-- END Header -->
 
@@ -67,7 +69,7 @@
                                 <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                                 <div class="row no-gutters justify-content-center">
                                     <div class="col-sm-8 col-xl-6">
-                                        <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                                        <form class="js-validation-signup">
                                             <div class="py-3">
                                                 <div class="form-group d-flex justify-content-between">
                                                     <input type="text" class="form-control form-control form-control-alt mx-1" id="signup-firstName" name="signup-firstName" placeholder="First Name">
@@ -89,22 +91,22 @@
                                                     <input type="text" class="js-flatpickr form-control form-control form-control-al" id="example-flatpickr-custom" name="example-flatpickr-custom" placeholder="Date of birth" data-date-format="d-m-Y">
                                                 </div>
                                                 <div class="d-flex p-2 justify-content-between">
-                                                    <label class="d-block">Gender</label>
+                                                    <label class="d-block" data-i18n="gender">Gender</label>
                                                     <div>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" id="example-radios-inline1" name="example-radios-inline" value="Male" checked="">
-                                                            <label class="form-check-label" for="example-radios-inline1">Male</label>
+                                                            <label class="form-check-label" for="example-radios-inline1" data-i18n="male">Male</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" id="example-radios-inline2" name="example-radios-inline" value="Female">
-                                                            <label class="form-check-label" for="example-radios-inline2">Female</label>
+                                                            <label class="form-check-label" for="example-radios-inline2" data-i18n="female">Female</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-block btn-hero-lg btn-hero-danger">
-                                                    <i class="fa fa-fw fa-rocket mr-1"></i> Get Discount
+                                                    <i class="fa fa-fw fa-rocket mr-1"></i> <span data-i18n="getDiscount"> Get Discount</span>
                                                 </button>
                                                 <p class="mt-3 mb-0 d-lg-flex justify-content-lg-end">
                                                     <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="login.html">
@@ -143,62 +145,92 @@
          <!-- Page JS Helpers (Flatpickr + BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Ion Range Slider + Masked Inputs + Password Strength Meter plugins) -->
         <script>jQuery(function(){Dashmix.helpers(['flatpickr', 'datepicker']);});</script>
         <script>
-            const translations = {
-                en: {
-                    home: "Home",
-                    myPoints: "My Points",
-                    bestCoupons: "Best Coupons",
-                    english: "English",
-                    arabic: "Arabic",
-                    login: "Login",
-                    profile: "Profile",
-                    experienceBest : "Experience the best patisserie.",
-                    loyaltyDiscount : "Loyalty Discount",
-                    rewards : "Rewards",
-                    redeemedPoints : "Redeemed Points",
-                    ptsToExpire : "Points to Expire",
-                    minRedeem : "Min Redeem",
-                    maxRedeem : "Max Redeem",
-                    getBestOffers : "Get the best deals & offers",
-                    noon : "Noon",
-                    btech : "B Tech",
-                    coupon10 : "Coupon 10% OFF",
-                    getCoupon : "Get Coupon",
-                    welcomeToHappy : "Welcome to the world of happiness",
-                    copyright : "Copyright",
-                    registeration : "Registeration"
-    
-                },
-                ar: {
-                    home: "الصفحة الرئيسية",
-                    myPoints: "نقاطي",
-                    bestCoupons: "افضل الكوبونات",
-                    english: "الانجليزية",
-                    arabic: "العربية",
-                    login: "تسجيل دخول",
-                    profile: "الملف الشخصي",
-                    experienceBest : "جرب أفضل الحلويات.",
-                    loyaltyDiscount : "خصم الولاء",
-                    rewards : "المكافئات",
-                    redeemedPoints : "النقاط المستبدلة",
-                    ptsToExpire : "نقاط تنتهي صلاحيتها",
-                    minRedeem : "الحد الأدنى من الاسترداد",
-                    maxRedeem : "الحد الاقصي من الاسترداد",
-                    getBestOffers : "احصل على أفضل الصفقات والعروض",
-                    noon : "نون",
-                    btech : "بي تك",
-                    coupon10 : "كوبون خصم 10٪",
-                    getCoupon : "احصل على قسيمة",
-                    welcomeToHappy : "مرحبا بكم في عالم السعادة",
-                    copyright : "حقوق الملكية",
-                    registeration : "تسجيل جديد"
-    
-    
-    
-    
-                },
-            };
-            function onSelectLang() {
+             const translations = {
+            en: {
+                home: "Home",
+                myPoints: "My Points",
+                bestCoupons: "Best Coupons",
+                english: "English",
+                arabic: "Arabic",
+                login: "Login",
+                profile: "Profile",
+                experienceBest : "Experience the best patisserie.",
+                loyaltyDiscount : "Loyalty Discount",
+                rewards : "Rewards",
+                redeemedPoints : "Redeemed Points",
+                ptsToExpire : "Points to Expire",
+                minRedeem : "Min Redeem",
+                maxRedeem : "Max Redeem",
+                getBestOffers : "Get the best deals & offers",
+                noon : "Noon",
+                btech : "B Tech",
+                coupon10 : "Coupon 10% OFF",
+                getCoupon : "Get Coupon",
+                welcomeToHappy : "Welcome to the world of happiness",
+                copyright : "Copyright",
+                registeration : "Registeration",
+                statistics : "Statistics",
+                username : "Username",
+                name : "Name",
+                avatar : "Your Avatar",
+                currentPass : "Current Password",
+                newPass : "New Password",
+                confirmPass : "Confirm New Password",
+                changePass : " Change Password",
+                userProfile : "  User Profile",
+                userProfileDesc : "Your account’s vital info. Your username will be publicly visible.",
+                chooseAvatar : "Choose a new avatar",
+                changePassDesc : "Changing your sign in password is an easy way to keep your account secure.",
+                updateProfile : "Update Profile",
+                gender : "Gender",
+                male : "Male",
+                female : "Female",
+                getDiscount : "Get Discount"
+
+            },
+            ar: {
+                home: "الصفحة الرئيسية",
+                myPoints: "نقاطي",
+                bestCoupons: "افضل الكوبونات",
+                english: "الانجليزية",
+                arabic: "العربية",
+                login: "تسجيل دخول",
+                profile: "الملف الشخصي",
+                experienceBest : "جرب أفضل الحلويات.",
+                loyaltyDiscount : "خصم الولاء",
+                rewards : "المكافئات",
+                redeemedPoints : "النقاط المستبدلة",
+                ptsToExpire : "نقاط تنتهي صلاحيتها",
+                minRedeem : "الحد الأدنى من الاسترداد",
+                maxRedeem : "الحد الاقصي من الاسترداد",
+                getBestOffers : "احصل على أفضل الصفقات والعروض",
+                noon : "نون",
+                btech : "بي تك",
+                coupon10 : "كوبون خصم 10٪",
+                getCoupon : "احصل على قسيمة",
+                welcomeToHappy : "مرحبا بكم في عالم السعادة",
+                copyright : "حقوق الملكية",
+                registeration : "تسجيل جديد",
+                statistics :  "إحصائيات",
+                username : "اسم المستخدم",
+                name : "الاسم",
+                avatar : "شخصيتك الإفتراضية",
+                currentPass : "كلمة المرور الحالية",
+                newPass : "كلمة المرور الجديدة",
+                confirmPass : "قم بتأكيد كلمة مرور جديدة",
+                changePass : " تغيير كلمة المرور",
+                userProfile : "  الملف الشخصي",
+                userProfileDesc : "معلومات حسابك الحيوية. سيكون اسم المستخدم الخاص بك مرئيًا للعامة.",
+                chooseAvatar : "اختر صورة رمزية جديدة",
+                changePassDesc : "يعد تغيير كلمة مرور تسجيل الدخول طريقة سهلة للحفاظ على أمان حسابك.",
+                updateProfile : "تحديث الملف الشخصي",
+                gender : "الجنس",
+                male : "ذكر",
+                female : "انثي",
+                getDiscount : "احصل علي الخصم"
+            },
+        };
+           function onSelectLang() {
               
                 setLanguage(document.getElementById("language-select").value);
                 localStorage.setItem("lang", document.getElementById("language-select").value);
