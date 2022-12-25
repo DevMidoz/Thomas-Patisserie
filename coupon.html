@@ -416,7 +416,7 @@
                 const elements = document.querySelectorAll("[data-i18n]");
                 elements.forEach((element) => {
                     const translationKey = element.getAttribute("data-i18n");
-                    element.textContent = translations[language][translationKey];
+                    element.localName === 'input' ? element.placeholder = translations[language][translationKey] : element.textContent = translations[language][translationKey];
                 });
                 document.dir = language === "ar" ? "rtl" : "ltr";
             };

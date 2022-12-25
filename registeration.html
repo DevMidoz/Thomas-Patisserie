@@ -72,23 +72,23 @@
                                         <form class="js-validation-signup">
                                             <div class="py-3">
                                                 <div class="form-group d-flex justify-content-between">
-                                                    <input type="text" class="form-control form-control form-control-alt mx-1" id="signup-firstName" name="signup-firstName" placeholder="First Name">
-                                                    <input type="text" class="form-control form-control form-control-alt mx-1" id="signup-lastName" name="signup-lastName" placeholder="Last Name">
+                                                    <input type="text" class="form-control form-control form-control-alt mx-1" id="signup-firstName" name="signup-firstName" data-i18n="firstName" placeholder="First Name">
+                                                    <input type="text" class="form-control form-control form-control-alt mx-1" id="signup-lastName" name="signup-lastName" data-i18n="lastName" placeholder="Last Name">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="tel" class="form-control form-control form-control-alt" id="signup-mobile" name="signup-mobile" placeholder="Mobile Number">
+                                                    <input type="tel" class="form-control form-control form-control-alt" id="signup-mobile" name="signup-mobile" data-i18n="mobile" placeholder="Mobile Number">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control form-control form-control-alt" id="signup-email" name="signup-email" placeholder="Email">
+                                                    <input type="email" class="form-control form-control form-control-alt" id="signup-email" name="signup-email" data-i18n="email" placeholder="Email">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="password" class="form-control form-control form-control-alt" id="signup-password" name="signup-password" placeholder="Password">
+                                                    <input type="password" class="form-control form-control form-control-alt" id="signup-password" name="signup-password" data-i18n="password" placeholder="Password">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="password" class="form-control form-control form-control-alt" id="signup-password-confirm" name="signup-password-confirm" placeholder="Password Confirm">
+                                                    <input type="password" class="form-control form-control form-control-alt" id="signup-password-confirm" name="signup-password-confirm" data-i18n="confirmPass" placeholder="Password Confirm">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" class="js-flatpickr form-control form-control form-control-al" id="example-flatpickr-custom" name="example-flatpickr-custom" placeholder="Date of birth" data-date-format="d-m-Y">
+                                                    <input type="text" class="js-flatpickr form-control form-control form-control-al" id="example-flatpickr-custom" name="example-flatpickr-custom" data-i18n="dateOfBirth"  placeholder="Date of birth" data-date-format="d-m-Y">
                                                 </div>
                                                 <div class="d-flex p-2 justify-content-between">
                                                     <label class="d-block" data-i18n="gender">Gender</label>
@@ -110,7 +110,7 @@
                                                 </button>
                                                 <p class="mt-3 mb-0 d-lg-flex justify-content-lg-end">
                                                     <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="login.html">
-                                                        <i class="fa fa-sign-in-alt text-muted mr-1"></i> Sign In
+                                                        <i class="fa fa-sign-in-alt text-muted mr-1"></i> <span data-i18n="login">Login</span> 
                                                     </a>
                                                   
                                                 </p>
@@ -185,8 +185,14 @@
                 gender : "Gender",
                 male : "Male",
                 female : "Female",
-                getDiscount : "Get Discount"
-
+                getDiscount : "Get Discount",
+                firstName : "First Name",
+                lastName : "Last Name",
+                mobile : "Mobile Number",
+                password : "Password",
+                dateOfBirth : "Date Of Birth",
+                email : "Email"
+                
             },
             ar: {
                 home: "الصفحة الرئيسية",
@@ -227,7 +233,13 @@
                 gender : "الجنس",
                 male : "ذكر",
                 female : "انثي",
-                getDiscount : "احصل علي الخصم"
+                getDiscount : "احصل علي الخصم",
+                firstName : "الاسم الاول",
+                lastName : "اسم العائلة",
+                mobile : "رقم المحمول",
+                password : "كلمة السر",
+                dateOfBirth : "تاريخ الميلاد",
+                email : "البريد الالكتروني"
             },
         };
            function onSelectLang() {
@@ -245,7 +257,7 @@
                 const elements = document.querySelectorAll("[data-i18n]");
                 elements.forEach((element) => {
                     const translationKey = element.getAttribute("data-i18n");
-                    element.textContent = translations[language][translationKey];
+                    element.localName === 'input' ? element.placeholder = translations[language][translationKey] : element.textContent = translations[language][translationKey];
                 });
                 document.dir = language === "ar" ? "rtl" : "ltr";
             };
