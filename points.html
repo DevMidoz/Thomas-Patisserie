@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Thomas Patisserie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/js/plugins/select2/css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/scss/main.scss"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <title>Thomas Patisserie</title>
+
+    <meta name="description" content="Thomas Patisserie project" />
+    <meta name="author" content="Ahmed Yasser" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Thomas Patisserie" />
+    <meta property="og:site_name" content="Thomas Patisserie" />
+    <meta property="og:description" content="Thomas Patisserie" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/photos/thomas_crown.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/media/favicons/favicon-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/media/favicons/apple-touch-icon-180x180.png"
+    />
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Fonts and Dashmix framework -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" id="css-main" href="/assets/css/dashmix.min.css" />
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+  <body>
+    <div
+      id="page-container"
+      class="sidebar sidebar-dark enable-page-overlay side-scroll page-header-fixed page-header-glass main-content-narrow"
+    >
+    <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header -->
+        <div class="=" style="background-color: #c62531">
+            <div class="content-header bg-white-10">
+                <!-- Logo -->
+                <a class="font-w600 text-white tracking-wide" href="">
+                    <img class="" src="assets/media/photos/thomas_icon_white.png" width="100" height="50"
+                        alt="thomas_icon" />
+                </a>
+                <!-- END Logo -->
+
+                <!-- Options -->
+                <div>
+                    <a class="js-class-toggle text-white-75" data-target="#sidebar-style-toggler"
+                        data-class="fa-toggle-off fa-toggle-on" data-toggle="layout"
+                        data-action="sidebar_style_toggle" href="javascript:void(0)">
+                        <i class="fa fa-toggle-off" id="sidebar-style-toggler"></i>
+                    </a>
+                    <!-- END Toggle Sidebar Style -->
+
+                    <!-- Close Sidebar, Visible only on mobile screens -->
+                    <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                    <a class="d-lg-none text-white ml-2" data-toggle="layout" data-action="sidebar_close"
+                        href="javascript:void(0)">
+                        <i class="fa fa-times-circle"></i>
+                    </a>
+                    <!-- END Close Sidebar -->
+                </div>
+                <!-- END Options -->
+            </div>
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+            <!-- Side Navigation -->
+            <div class="content-side">
+                <ul class="nav-main">
+                    <li class="nav-main-item">
+                        <a class="nav-main-link active" href="index.html">
+                            <i class="nav-main-link-icon fa fa-home"></i>
+                            <span class="nav-main-link-name" data-i18n="home"> Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="points.html">
+                            <i class="nav-main-link-icon fa fa-coins"></i>
+                            <span class="nav-main-link-name" data-i18n="myPoints">My Points</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="offers.html">
+                            <i class="nav-main-link-icon fa fa-barcode"></i>
+                            <span class="nav-main-link-name" data-i18n="bestCoupons">Best Coupons</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <select class="js-select2 form-control border-0 text-white" id="langSelect"
+                            name="example-select2" style="width: 100%; background-color: #c62531"
+                            onchange="onSelectLang()">
+                            <option class="text-white" selected value="en" data-i18n="english">
+                                English
+                            </option>
+                            <option class="text-white" value="ar" data-i18n="arabic">
+                                Arabic
+                            </option>
+                        </select>
+                        <!-- <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon fa fa-globe"></i>
+                                <span class="nav-main-link-name" data-i18n="languages">Languages</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="javascript:void(0)">
+                                        <span class="nav-main-link-name" data-i18n="arabic">Arabic</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="javascript:void(0)">
+                                        <span class="nav-main-link-name" data-i18n="english">English</span>
+                                    </a>
+                                </li>
+                            </ul> -->
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="login.html">
+                            <i class="nav-main-link-icon fa fa-user-lock"></i>
+                            <span class="nav-main-link-name" data-i18n="login">Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" href="profile.html">
+                            <i class="nav-main-link-icon far fa-user-circle"></i>
+                            <span class="nav-main-link-name" data-i18n="profile">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+    </nav>
+    <!-- END Sidebar -->
+
+    <!-- Header -->
+    <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+            <!-- Left Section -->
+            <div class="d-flex align-items-center">
+                <!-- Logo -->
+                <a class="link-fx font-size-lg font-w600 text-dark" href="">
+                    <img class="" src="assets/media/photos/thomas_icon_white.png" width="100" height="50"
+                        alt="thomas_icon" />
+                </a>
+                <!-- END Logo -->
+            </div>
+            <!-- END Left Section -->
+
+            <!-- Right Section -->
+            <div class="d-flex align-items-center">
+                <!-- Menu -->
+                <div class="d-none d-lg-block">
+                    <ul class="nav-main nav-main-horizontal nav-main-hover">
+                        <li class="nav-main-item">
+                            <a class="nav-main-link active" href="index.html">
+                                <i class="nav-main-link-icon fa fa-home"></i>
+                                <span class="nav-main-link-name" data-i18n="home">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="points.html">
+                                <i class="nav-main-link-icon fa fa-coins"></i>
+                                <span class="nav-main-link-name" data-i18n="myPoints">My Points</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="offers.html">
+                                <!-- <i class="nav-main-link-icon fab fa-paypal"></i> -->
+                                <i class="nav-main-link-icon fa fa-barcode"></i>
+                                <span class="nav-main-link-name" data-i18n="bestCoupons">Best Coupons</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="login.html">
+                                <i class="nav-main-link-icon fa fa-user-lock"></i>
+                                <span class="nav-main-link-name" data-i18n="login">Login</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="profile.html">
+                                <i class="nav-main-link-icon far fa-user-circle"></i>
+                                <span class="nav-main-link-name" data-i18n="profile">Profile</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <select class="form-control border-0 text-white mx-2" style="width: 100%; background-color:#C62531;" id="language-select" name="example-select" onchange="onSelectLang()">
+                                <option value="en" selected>En</option>
+                                <option value="ar">Ar</option>
+                            </select>
+                            <!-- <select class=" form-control border-0 text-white" id="langSelect" name="example-select2" style="width: 100%; background-color:#C62531;"  >
+                                    <option class="text-white" selected value="en" data-i18n="english">English</option>
+                                    <option class="text-white" value="ar" data-i18n="arabic">Arabic</option>
+                                </select> -->
+                            <!-- <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                    <i class="nav-main-link-icon fa fa-globe"></i>
+                                    <span class="nav-main-link-name" data-i18n="languages">Languages</span>
+                                </a>
+                                <ul class="nav-main-submenu">
+                                    <li class="nav-main-item">
+                                        <a class="nav-main-link" href="javascript:void(0)">
+                                            <span class="nav-main-link-name" data-i18n="arabic">Arabic</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-main-item">
+                                        <a class="nav-main-link" href="javascript:void(0)">
+                                            <span class="nav-main-link-name"  >English</span>
+                                        </a>
+                                    </li>
+                                </ul> -->
+                        </li>
+                        <!-- <li class="nav-main-item">
+                            <select class="form-control bg-primary border-0 text-white mx-2" id="language-select" name="example-select" onchange="changeLayout()">
+                                <option value="1" selected>En</option>
+                                <option value="2">Ar</option>
+                            </select>
+                            </li> -->
+                    </ul>
+                </div>
+                <!-- END Menu -->
+
+                <!-- Toggle Sidebar -->
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-dual d-lg-none ml-1" data-toggle="layout"
+                    data-action="sidebar_toggle">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+                <!-- END Toggle Sidebar -->
+            </div>
+            <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-primary">
+            <div class="content-header">
+                <form class="w-100" method="POST">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                            <button type="button" class="btn btn-primary" data-toggle="layout"
+                                data-action="header_search_off">
+                                <i class="fa fa-fw fa-times-circle"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control border-0" placeholder="Search or hit ESC.."
+                            id="page-header-search-input" name="page-header-search-input" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary-darker">
+            <div class="content-header">
+                <div class="w-100 text-center">
+                    <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+                </div>
+            </div>
+        </div>
+        <!-- END Header Loader -->
+    </header>
+    <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+           <!-- Hero -->
+           <div class="bg-image" style="background-image: url('assets/media/photos/wallpaper_2.jpg');">
+            <div class="bg-black-75">
+                <div class="content content-full content-top">
+                    <div class="pt-5 pb-4 text-center">
+                        <img class="mb-3"  src="assets/media/photos/thomas_icon_white.png" data-toggle="appear" data-class="animated fadeInDown" alt="thomas_icon">
+                        <h1 class="text-white font-w400" data-i18n="loyaltyDiscount">Loyalty Discount</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Hero -->
+        <div class="content pt-4">
+            <h2 class="content-heading" data-i18n="statistics">Statistics</h2>
+          <div class="row js-appear-enabled animated fadeIn" data-toggle="appear">
+              <div class="col-md-6 col-xl-3">
+                  <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                      <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                          <div>
+                              <i class="fa fa-2x fa-coins text-warning"></i>
+                          </div>
+                          <div class="ml-3 text-right">
+                              <p class="font-size-h3 font-w300 mb-0">
+                                1500 
+                              </p>
+                              <p class="text-muted mb-0" data-i18n="myPoints">
+                                My Points
+                              </p>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-md-6 col-xl-3">
+                <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                        <div>
+                            <i class="fa fa-2x fa-box-open text-primary"></i>
+                        </div>
+                        <div class="ml-3 text-right">
+                            <p class="font-size-h3 font-w300 mb-0">
+                                180
+                            </p>
+                            <p class="text-muted mb-0" data-i18n="rewards">
+                                Rewards
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                        <div>
+                            <i class="fa fa-2x fa-gifts text-success-light"></i>
+                        </div>
+                        <div class="ml-3 text-right">
+                            <p class="font-size-h3 font-w300 mb-0">
+                                215
+                            </p>
+                            <p class="text-muted mb-0" data-i18n="redeemedPoints">
+                                Redeemed Points
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                        <div>
+                            <i class="fa fa-2x fa-clock text-danger"></i>
+                        </div>
+                        <div class="ml-3 text-right">
+                            <p class="font-size-h3 font-w300 mb-0">
+                                160
+                            </p>
+                            <p class="text-muted mb-0" data-i18n="ptsToExpire">
+                                Points to Expire
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            </div>
+            <div class="row justify-content-center js-appear-enabled animated fadeIn" data-toggle="appear">
+                <div class="col-12 col-sm-6">
+                    <a class="block block-rounded block-link-shadow bg-danger" href="javascript:void(0)">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <i class="fa fa-2x fa-arrow-down text-primary-lighter"></i>
+                            </div>
+                            <div class="ml-3 text-right">
+                                <p class="text-white font-size-h3 font-w300 mb-0">
+                                    100
+                                </p>
+                                <p class="text-white-75 mb-0" data-i18n="minRedeem">
+                                    Min Redeem
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <a class="block block-rounded block-link-shadow bg-primary" href="javascript:void(0)">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <i class="fa fa-2x fa-arrow-up text-primary-lighter"></i>
+                            </div>
+                            <div class="ml-3 text-right">
+                                <p class="text-white font-size-h3 font-w300 mb-0">
+                                   1000
+                                </p>
+                                <p class="text-white-75 mb-0" data-i18n="maxRedeem">
+                                    Max Redeem
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </main>
+      <!-- END Main Container -->
+    </div>
+    <!-- END Page Container -->
+
+    <script src="assets/js/dashmix.core.min.js"></script>
+    <script src="assets/js/dashmix.app.min.js"></script>
+    <script>
+        const translations = {
+            en: {
+                home: "Home",
+                myPoints: "My Points",
+                bestCoupons: "Best Coupons",
+                english: "English",
+                arabic: "Arabic",
+                login: "Login",
+                profile: "Profile",
+                experienceBest : "Experience the best patisserie.",
+                loyaltyDiscount : "Loyalty Discount",
+                rewards : "Rewards",
+                redeemedPoints : "Redeemed Points",
+                ptsToExpire : "Points to Expire",
+                minRedeem : "Min Redeem",
+                maxRedeem : "Max Redeem",
+                getBestOffers : "Get the best deals & offers",
+                noon : "Noon",
+                btech : "B Tech",
+                coupon10 : "Coupon 10% OFF",
+                getCoupon : "Get Coupon",
+                welcomeToHappy : "Welcome to the world of happiness",
+                copyright : "Copyright",
+                registeration : "Registeration",
+                statistics : "Statistics"
+
+            },
+            ar: {
+                home: "الصفحة الرئيسية",
+                myPoints: "نقاطي",
+                bestCoupons: "افضل الكوبونات",
+                english: "الانجليزية",
+                arabic: "العربية",
+                login: "تسجيل دخول",
+                profile: "الملف الشخصي",
+                experienceBest : "جرب أفضل الحلويات.",
+                loyaltyDiscount : "خصم الولاء",
+                rewards : "المكافئات",
+                redeemedPoints : "النقاط المستبدلة",
+                ptsToExpire : "نقاط تنتهي صلاحيتها",
+                minRedeem : "الحد الأدنى من الاسترداد",
+                maxRedeem : "الحد الاقصي من الاسترداد",
+                getBestOffers : "احصل على أفضل الصفقات والعروض",
+                noon : "نون",
+                btech : "بي تك",
+                coupon10 : "كوبون خصم 10٪",
+                getCoupon : "احصل على قسيمة",
+                welcomeToHappy : "مرحبا بكم في عالم السعادة",
+                copyright : "حقوق الملكية",
+                registeration : "تسجيل جديد",
+                statistics :  "إحصائيات"
+
+
+
+
+            },
+        };
+        function onSelectLang() {
+          
+            setLanguage(document.getElementById("language-select").value);
+            localStorage.setItem("lang", document.getElementById("language-select").value);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+            document.getElementById("language-select").value = language
+            setLanguage(language);
+        });
+
+        const setLanguage = (language) => {
+            const elements = document.querySelectorAll("[data-i18n]");
+            elements.forEach((element) => {
+                const translationKey = element.getAttribute("data-i18n");
+                element.textContent = translations[language][translationKey];
+            });
+            document.dir = language === "ar" ? "rtl" : "ltr";
+        };
+    </script>
+  </body>
+</html>
