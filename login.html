@@ -220,14 +220,18 @@
                 password: "كلمة السر",
             },
         };
-        function onSelectLang() {
-
+        function onSelectLang(from) {
+        if (from === 'mobile') {
+            setLanguage(document.getElementById("language-select-mobile").value);
+            localStorage.setItem("lang", document.getElementById("language-select-mobile").value);
+        } else {
             setLanguage(document.getElementById("language-select").value);
-            localStorage.setItem("lang", document.getElementById("language-select").value);
+            localStorage.setItem("lang", document.getElementById("language-select").value);   
+        }
         }
         document.addEventListener("DOMContentLoaded", () => {
-            debugger
             const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+            document.getElementById("language-select-mobile").value = language
             document.getElementById("language-select").value = language
             setLanguage(language);
         });

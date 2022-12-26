@@ -100,7 +100,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                  <select class="form-control border-0 text-white mx-2" style="width: 100%; background-color:#C62531;" id="language-select" name="example-select" onchange="onSelectLang()">
+                                  <select class="form-control border-0 text-white mx-2" style="width: 100%; background-color:#C62531;" id="language-select-mobile" name="example-select" onchange="onSelectLang('mobile')">
                                         <option value="en" selected>En</option>
                                         <option value="ar">Ar</option>
                                     </select>
@@ -193,7 +193,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
-                                    <select class="form-control border-0 text-white mx-2" style="width: 100%; background-color:#C62531;" id="language-select" name="example-select" onchange="onSelectLang()">
+                                    <select class="form-control border-0 text-white mx-2" style="width: 100%; background-color:#C62531;" id="language-select" name="example-select" onchange="onSelectLang('desktop')">
                                         <option value="en" selected>En</option>
                                         <option value="ar">Ar</option>
                                     </select>
@@ -395,16 +395,21 @@
                     specialOffer : "خصم نون 80٪ + خصم إضافي 10٪ على مستوى الموقع حتى 50 جنيهًا ، احصل على الكود الخاص بك"
   },
 };
-            function onSelectLang() {
-              
-                setLanguage(document.getElementById("language-select").value);
-                localStorage.setItem("lang", document.getElementById("language-select").value);
-            }
-            document.addEventListener("DOMContentLoaded", () => {
-                const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
-                document.getElementById("language-select").value = language
-                setLanguage(language);
-            });
+function onSelectLang(from) {
+        if (from === 'mobile') {
+            setLanguage(document.getElementById("language-select-mobile").value);
+            localStorage.setItem("lang", document.getElementById("language-select-mobile").value);
+        } else {
+            setLanguage(document.getElementById("language-select").value);
+            localStorage.setItem("lang", document.getElementById("language-select").value);   
+        }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+            document.getElementById("language-select-mobile").value = language
+            document.getElementById("language-select").value = language
+            setLanguage(language);
+        });
     
             const setLanguage = (language) => {
                 const elements = document.querySelectorAll("[data-i18n]");
